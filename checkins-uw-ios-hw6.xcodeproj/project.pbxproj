@@ -382,6 +382,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "checkins-uw-ios-hw6/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -396,6 +397,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "checkins-uw-ios-hw6/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -454,6 +456,7 @@
 				87B9E9501B12484A00971FB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		87B9E9511B12484A00971FB0 /* Build configuration list for PBXNativeTarget "checkins-uw-ios-hw6Tests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +465,7 @@
 				87B9E9531B12484A00971FB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
