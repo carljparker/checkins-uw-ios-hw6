@@ -19,6 +19,7 @@
 		87B9E9601B124B9100971FB0 /* ImageListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B9E95B1B124B9100971FB0 /* ImageListTableViewController.m */; };
 		87B9E9611B124B9100971FB0 /* GetImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B9E95D1B124B9100971FB0 /* GetImageViewController.m */; };
 		87B9E9631B124CEE00971FB0 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87B9E9621B124CEE00971FB0 /* MobileCoreServices.framework */; };
+		87B9E9671B13CB3D00971FB0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87B9E9661B13CB3D00971FB0 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		87B9E95C1B124B9100971FB0 /* GetImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetImageViewController.h; sourceTree = "<group>"; };
 		87B9E95D1B124B9100971FB0 /* GetImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetImageViewController.m; sourceTree = "<group>"; };
 		87B9E9621B124CEE00971FB0 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		87B9E9661B13CB3D00971FB0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87B9E9671B13CB3D00971FB0 /* CoreLocation.framework in Frameworks */,
 				87B9E9631B124CEE00971FB0 /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,7 +81,7 @@
 		87B9E9221B12484A00971FB0 = {
 			isa = PBXGroup;
 			children = (
-				87B9E9621B124CEE00971FB0 /* MobileCoreServices.framework */,
+				87B9E9681B13CB4400971FB0 /* Frameworks */,
 				87B9E92D1B12484A00971FB0 /* checkins-uw-ios-hw6 */,
 				87B9E9471B12484A00971FB0 /* checkins-uw-ios-hw6Tests */,
 				87B9E92C1B12484A00971FB0 /* Products */,
@@ -141,6 +144,15 @@
 				87B9E9491B12484A00971FB0 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		87B9E9681B13CB4400971FB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87B9E9621B124CEE00971FB0 /* MobileCoreServices.framework */,
+				87B9E9661B13CB3D00971FB0 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -454,6 +466,7 @@
 				87B9E9501B12484A00971FB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		87B9E9511B12484A00971FB0 /* Build configuration list for PBXNativeTarget "checkins-uw-ios-hw6Tests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +475,7 @@
 				87B9E9531B12484A00971FB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
