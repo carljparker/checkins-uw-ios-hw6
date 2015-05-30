@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Pc9-kR-CHb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yw7-Jj-vY6">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -50,10 +50,10 @@
             </objects>
             <point key="canvasLocation" x="3282" y="1119"/>
         </scene>
-        <!--Private Image Gallery-->
+        <!--My Image Gallery-->
         <scene sceneID="9KJ-x5-8cR">
             <objects>
-                <tableViewController id="UCm-1d-zvl" customClass="ImageListTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MyImageGallery" id="UCm-1d-zvl" customClass="ImageListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="giq-Am-1HY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,7 +105,7 @@
                             <outlet property="delegate" destination="UCm-1d-zvl" id="QXF-BF-Gi9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Private Image Gallery" id="Wao-Ga-117">
+                    <navigationItem key="navigationItem" title="My Image Gallery" id="Wao-Ga-117">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3Qo-Bl-lrm">
                             <connections>
                                 <segue destination="Bn7-fN-oSh" kind="presentation" id="o5v-ch-d8r"/>
@@ -133,10 +133,10 @@
             </objects>
             <point key="canvasLocation" x="774" y="199"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="Xux-Us-abP">
             <objects>
-                <viewController id="dv9-DQ-L6C" sceneMemberID="viewController">
+                <viewController id="dv9-DQ-L6C" customClass="MapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="o6R-QF-548"/>
                         <viewControllerLayoutGuide type="bottom" id="Vez-pz-pBi"/>
@@ -242,6 +242,9 @@
                     <navigationItem key="navigationItem" id="Bvc-Pz-w4z">
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="GVa-jN-t6d"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mkMapView" destination="Qqz-Qx-iF7" id="Yyz-hV-5MJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6kB-hn-SML" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -268,7 +271,7 @@
         <!--Navigation Controller-->
         <scene sceneID="dk4-1h-A0V">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yw7-Jj-vY6" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MapKitNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="yw7-Jj-vY6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TCu-FA-EtO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
