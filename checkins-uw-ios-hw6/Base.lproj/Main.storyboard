@@ -48,7 +48,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="s52-QA-dPi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2365" y="1119"/>
+            <point key="canvasLocation" x="3282" y="1119"/>
         </scene>
         <!--Private Image Gallery-->
         <scene sceneID="9KJ-x5-8cR">
@@ -133,6 +133,92 @@
             </objects>
             <point key="canvasLocation" x="774" y="199"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Xux-Us-abP">
+            <objects>
+                <viewController id="dv9-DQ-L6C" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o6R-QF-548"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vez-pz-pBi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vYB-tG-Z5e">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="GJL-xa-e6g">
+                                <rect key="frame" x="64" y="84" width="480" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="2" y="72" width="400" height="44"/>
+                                </variation>
+                            </searchBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Qqz-Qx-iF7">
+                                <rect key="frame" x="64" y="146" width="480" height="434"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="652" id="ELR-zj-612"/>
+                                    <constraint firstAttribute="height" constant="434" id="otk-Hm-C5R"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ELR-zj-612"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="ELR-zj-612"/>
+                                    </mask>
+                                </variation>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qqz-Qx-iF7" secondAttribute="trailing" constant="40" id="6th-7N-BMP"/>
+                            <constraint firstItem="Qqz-Qx-iF7" firstAttribute="centerX" secondItem="GJL-xa-e6g" secondAttribute="centerX" id="7iR-Wt-iPm"/>
+                            <constraint firstAttribute="bottom" secondItem="Qqz-Qx-iF7" secondAttribute="bottom" constant="20" symbolic="YES" id="9Mb-78-2uK"/>
+                            <constraint firstItem="Qqz-Qx-iF7" firstAttribute="top" secondItem="GJL-xa-e6g" secondAttribute="bottom" constant="12" id="A8b-hW-tTS"/>
+                            <constraint firstItem="Qqz-Qx-iF7" firstAttribute="top" secondItem="GJL-xa-e6g" secondAttribute="bottom" constant="35" id="MRf-dV-bLz"/>
+                            <constraint firstItem="Qqz-Qx-iF7" firstAttribute="leading" secondItem="vYB-tG-Z5e" secondAttribute="leadingMargin" id="NAc-Ka-USC"/>
+                            <constraint firstAttribute="bottom" secondItem="Qqz-Qx-iF7" secondAttribute="bottom" constant="20" symbolic="YES" id="ZV6-qg-MuZ"/>
+                            <constraint firstItem="Qqz-Qx-iF7" firstAttribute="leading" secondItem="vYB-tG-Z5e" secondAttribute="leadingMargin" constant="48" id="cIh-fD-bCp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qqz-Qx-iF7" secondAttribute="trailing" constant="-4" id="eC2-tq-JC5"/>
+                            <constraint firstItem="Qqz-Qx-iF7" firstAttribute="leading" secondItem="GJL-xa-e6g" secondAttribute="leading" id="hre-Ee-fOf"/>
+                            <constraint firstItem="Qqz-Qx-iF7" firstAttribute="top" secondItem="GJL-xa-e6g" secondAttribute="bottom" constant="18" id="lLb-25-6kT"/>
+                            <constraint firstItem="Qqz-Qx-iF7" firstAttribute="trailing" secondItem="GJL-xa-e6g" secondAttribute="trailing" id="s42-Il-7Uz"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="GJL-xa-e6g"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="7iR-Wt-iPm"/>
+                                <exclude reference="9Mb-78-2uK"/>
+                                <exclude reference="A8b-hW-tTS"/>
+                                <exclude reference="NAc-Ka-USC"/>
+                                <exclude reference="eC2-tq-JC5"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="GJL-xa-e6g"/>
+                                <include reference="Qqz-Qx-iF7"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="7iR-Wt-iPm"/>
+                                <include reference="9Mb-78-2uK"/>
+                                <include reference="A8b-hW-tTS"/>
+                                <include reference="NAc-Ka-USC"/>
+                                <include reference="eC2-tq-JC5"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="Bvc-Pz-w4z">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="GVa-jN-t6d"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6kB-hn-SML" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1302" y="1162"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="d7Z-6q-sA4">
             <objects>
@@ -149,7 +235,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nbP-Ab-n7z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1553" y="1119"/>
+            <point key="canvasLocation" x="2470.5" y="1119"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dk4-1h-A0V">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yw7-Jj-vY6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TCu-FA-EtO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dv9-DQ-L6C" kind="relationship" relationship="rootViewController" id="duH-NQ-2Ir"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gR7-gK-ENK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="384" y="1162.5"/>
         </scene>
     </scenes>
 </document>
