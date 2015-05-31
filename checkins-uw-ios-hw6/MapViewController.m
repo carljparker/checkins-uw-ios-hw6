@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) MKLocalSearch *localSearch;
+@property (strong, nonatomic) IBOutlet MKMapView *mkMapView;
 
 @end
 

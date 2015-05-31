@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		871EDFB41B1A72C300AA36F9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 871EDFB31B1A72C300AA36F9 /* MapKit.framework */; };
+		872597DE1B18B34E00CA5C48 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 872597DD1B18B34E00CA5C48 /* MapViewController.m */; };
 		87B9E9311B12484A00971FB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B9E9301B12484A00971FB0 /* main.m */; };
 		87B9E9341B12484A00971FB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B9E9331B12484A00971FB0 /* AppDelegate.m */; };
 		87B9E9371B12484A00971FB0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B9E9361B12484A00971FB0 /* ViewController.m */; };
@@ -33,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		871EDFB31B1A72C300AA36F9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		872597DC1B18B34E00CA5C48 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		872597DD1B18B34E00CA5C48 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		87B9E92B1B12484A00971FB0 /* checkins-uw-ios-hw6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "checkins-uw-ios-hw6.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87B9E92F1B12484A00971FB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87B9E9301B12484A00971FB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -63,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				871EDFB41B1A72C300AA36F9 /* MapKit.framework in Frameworks */,
 				87B9E9671B13CB3D00971FB0 /* CoreLocation.framework in Frameworks */,
 				87B9E9631B124CEE00971FB0 /* MobileCoreServices.framework in Frameworks */,
 			);
@@ -104,8 +110,8 @@
 				87B9E9331B12484A00971FB0 /* AppDelegate.m */,
 				87B9E9351B12484A00971FB0 /* ViewController.h */,
 				87B9E9361B12484A00971FB0 /* ViewController.m */,
-				87B9E9381B12484A00971FB0 /* Main.storyboard */,
-				87B9E93B1B12484A00971FB0 /* Images.xcassets */,
+				872597DC1B18B34E00CA5C48 /* MapViewController.h */,
+				872597DD1B18B34E00CA5C48 /* MapViewController.m */,
 				87B9E93D1B12484A00971FB0 /* LaunchScreen.xib */,
 				87B9E9561B124B9100971FB0 /* ImageInfo.h */,
 				87B9E9571B124B9100971FB0 /* ImageInfo.m */,
@@ -115,6 +121,8 @@
 				87B9E95B1B124B9100971FB0 /* ImageListTableViewController.m */,
 				87B9E95C1B124B9100971FB0 /* GetImageViewController.h */,
 				87B9E95D1B124B9100971FB0 /* GetImageViewController.m */,
+				87B9E93B1B12484A00971FB0 /* Images.xcassets */,
+				87B9E9381B12484A00971FB0 /* Main.storyboard */,
 				87B9E92E1B12484A00971FB0 /* Supporting Files */,
 			);
 			path = "checkins-uw-ios-hw6";
@@ -149,6 +157,7 @@
 		87B9E9681B13CB4400971FB0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				871EDFB31B1A72C300AA36F9 /* MapKit.framework */,
 				87B9E9621B124CEE00971FB0 /* MobileCoreServices.framework */,
 				87B9E9661B13CB3D00971FB0 /* CoreLocation.framework */,
 			);
@@ -258,6 +267,7 @@
 				87B9E9371B12484A00971FB0 /* ViewController.m in Sources */,
 				87B9E9601B124B9100971FB0 /* ImageListTableViewController.m in Sources */,
 				87B9E95E1B124B9100971FB0 /* ImageInfo.m in Sources */,
+				872597DE1B18B34E00CA5C48 /* MapViewController.m in Sources */,
 				87B9E9611B124B9100971FB0 /* GetImageViewController.m in Sources */,
 				87B9E95F1B124B9100971FB0 /* ImageTableViewCell.m in Sources */,
 				87B9E9341B12484A00971FB0 /* AppDelegate.m in Sources */,
