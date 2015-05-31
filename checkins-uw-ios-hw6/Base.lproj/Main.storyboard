@@ -165,14 +165,11 @@
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="GJL-xa-e6g">
                                 <rect key="frame" x="64" y="78" width="480" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="2" y="72" width="400" height="44"/>
-                                </variation>
                             </searchBar>
                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LeO-fe-G2n">
                                 <rect key="frame" x="60" y="81" width="480" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="2" y="72" width="400" height="44"/>
                                 </variation>
                             </searchBar>
