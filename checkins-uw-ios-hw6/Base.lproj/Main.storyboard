@@ -142,12 +142,6 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="wTn-he-DyB">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wTn-he-DyB" id="hXq-bh-xqS">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="checkinCustomCell" rowHeight="94" id="uhf-ZS-ukm" customClass="CheckinTableViewCell">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -156,20 +150,51 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0Q-Vr-CM2">
                                             <rect key="frame" x="8" y="36" width="71" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="76" id="1n9-iK-IK5"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="1n9-iK-IK5"/>
+                                                </mask>
+                                            </variation>
                                             <variation key="widthClass=regular" fixedFrame="YES">
                                                 <rect key="frame" x="8" y="33" width="76" height="28"/>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                 <rect key="frame" x="19" y="36" width="69" height="21"/>
                                             </variation>
+                                            <variation key="heightClass=regular-widthClass=regular">
+                                                <mask key="constraints">
+                                                    <include reference="1n9-iK-IK5"/>
+                                                </mask>
+                                            </variation>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="centerY" secondItem="Z0Q-Vr-CM2" secondAttribute="centerY" constant="-0.5" id="GPZ-Uf-gzL"/>
+                                        <constraint firstItem="Z0Q-Vr-CM2" firstAttribute="leading" secondItem="TFg-jV-Wgj" secondAttribute="leadingMargin" constant="-7" id="HSl-nf-Ids">
+                                            <variation key="heightClass=regular-widthClass=regular" constant="42"/>
+                                        </constraint>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="GPZ-Uf-gzL"/>
+                                            <exclude reference="HSl-nf-Ids"/>
+                                        </mask>
+                                    </variation>
                                     <variation key="heightClass=regular-widthClass=compact">
                                         <mask key="subviews">
                                             <include reference="Z0Q-Vr-CM2"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <mask key="constraints">
+                                            <include reference="GPZ-Uf-gzL"/>
+                                            <include reference="HSl-nf-Ids"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
