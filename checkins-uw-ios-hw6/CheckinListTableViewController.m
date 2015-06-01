@@ -31,6 +31,8 @@ static NSString *checkinCustomTableCellID = @"checkinCustomCell";
     
     self.checkinInfoList = [[NSMutableArray alloc] init];
     
+    self.tableView.delegate = self;
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -70,6 +72,15 @@ static NSString *checkinCustomTableCellID = @"checkinCustomCell";
     return cell;
 }
 
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"%@", @"didSelectRowAtIndexPath");
+}
+
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"%@", @"accessoryButtonTappedForRowWithIndexPath");
+}
 
 
 //
