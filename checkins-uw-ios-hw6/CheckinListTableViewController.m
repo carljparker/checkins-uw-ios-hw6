@@ -9,6 +9,7 @@
 
 #import "CheckinListTableViewController.h"
 #import "CheckinTableViewCell.h"
+#import "MapViewController.h"
 
 
 static NSString *checkinCustomTableCellID = @"checkinCustomCell";
@@ -16,15 +17,19 @@ static NSString *checkinCustomTableCellID = @"checkinCustomCell";
 
 @interface CheckinListTableViewController ()
 
-@property (nonatomic, copy) NSMutableArray *checkinInfoList;
+@property (nonatomic, strong) NSMutableArray *checkinInfoList;
 
 @end
+
+// NSMutableArray *checkinInfoList;
 
 
 @implementation CheckinListTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.checkinInfoList = [[NSMutableArray alloc] init];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -46,9 +51,8 @@ static NSString *checkinCustomTableCellID = @"checkinCustomCell";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 3;
+    return self.checkinInfoList.count;
 }
 
 
@@ -58,7 +62,10 @@ static NSString *checkinCustomTableCellID = @"checkinCustomCell";
     
     // Configure the cell...
     
-    cell.checkinLocation.text = @"7121 Delmar";
+    
+    CheckinInfo * checkinInfo = (CheckinInfo *)self.checkinInfoList[indexPath.row];
+    
+    cell.checkinLocation.text = checkinInfo.location;
     
     return cell;
 }
@@ -74,6 +81,28 @@ static NSString *checkinCustomTableCellID = @"checkinCustomCell";
     NSLog(@"%@", @"Done button dismissal of map view & search UX");
     
 }
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    [super prepareForSegue:segue sender:sender];
+    
+    UINavigationController *navigationController = (UINavigationController *)segue.destinationViewController;
+    
+    MapViewController *mapViewController = (MapViewController *)navigationController.topViewController;
+    
+    mapViewController.delegate = self;
+    
+}
+
+
+- (void)mapViewController:(MapViewController *)mapViewController didGetCheckinInfo:(CheckinInfo *)checkinInfo {
+    
+    [self.checkinInfoList addObject:checkinInfo];
+    
+    [self.tableView reloadData];
+    
+}
+
 
 /*
 // Override to support conditional editing of the table view.

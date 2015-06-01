@@ -103,6 +103,13 @@
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
     NSLog(@"%@", view.annotation.title);
+    
+    CheckinInfo *checkinInfo = [[CheckinInfo alloc] initWithLocation:view.annotation.title];
+    
+    [self.delegate mapViewController:self didGetCheckinInfo:checkinInfo];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+
 }
 
 -(void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {

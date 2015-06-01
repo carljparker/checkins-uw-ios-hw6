@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MapViewController.h"
 
-@interface CheckinListTableViewController : UITableViewController
+@interface CheckinListTableViewController : UITableViewController <MapViewControllerDelegate>
 
 @end

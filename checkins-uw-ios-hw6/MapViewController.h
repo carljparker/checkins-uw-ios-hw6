@@ -10,6 +10,21 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
+#import "CheckinInfo.h"
+
+@class MapViewController;
+
+@protocol MapViewControllerDelegate <NSObject>
+
+@required
+
+- (void)mapViewController:(MapViewController *)mapViewController
+               didGetCheckinInfo:(CheckinInfo *)checkinInfo;
+
+@end
+
 @interface MapViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate, UISearchBarDelegate>
+
+@property (nonatomic, weak) id<MapViewControllerDelegate> delegate;
 
 @end
