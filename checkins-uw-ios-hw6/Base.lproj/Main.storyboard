@@ -148,10 +148,12 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uhf-ZS-ukm" id="TFg-jV-Wgj">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0Q-Vr-CM2">
-                                            <rect key="frame" x="8" y="36" width="71" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0Q-Vr-CM2">
+                                            <rect key="frame" x="10" y="36" width="100" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="76" id="1n9-iK-IK5"/>
+                                                <constraint firstAttribute="width" constant="100" id="Wtq-pI-Ryk"/>
+                                                <constraint firstAttribute="width" constant="69" id="bg6-Ad-ogw"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -159,13 +161,16 @@
                                             <variation key="default">
                                                 <mask key="constraints">
                                                     <exclude reference="1n9-iK-IK5"/>
+                                                    <exclude reference="bg6-Ad-ogw"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=regular" fixedFrame="YES">
                                                 <rect key="frame" x="8" y="33" width="76" height="28"/>
                                             </variation>
-                                            <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                <rect key="frame" x="19" y="36" width="69" height="21"/>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="bg6-Ad-ogw"/>
+                                                </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=regular">
                                                 <mask key="constraints">
@@ -175,20 +180,30 @@
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="Z0Q-Vr-CM2" firstAttribute="leading" secondItem="TFg-jV-Wgj" secondAttribute="leadingMargin" constant="4" id="83T-Kn-PeP"/>
                                         <constraint firstAttribute="centerY" secondItem="Z0Q-Vr-CM2" secondAttribute="centerY" constant="-0.5" id="GPZ-Uf-gzL"/>
                                         <constraint firstItem="Z0Q-Vr-CM2" firstAttribute="leading" secondItem="TFg-jV-Wgj" secondAttribute="leadingMargin" constant="-7" id="HSl-nf-Ids">
                                             <variation key="heightClass=regular-widthClass=regular" constant="42"/>
                                         </constraint>
+                                        <constraint firstItem="Z0Q-Vr-CM2" firstAttribute="centerY" secondItem="TFg-jV-Wgj" secondAttribute="centerY" id="PVg-22-1fh"/>
+                                        <constraint firstItem="Z0Q-Vr-CM2" firstAttribute="centerY" secondItem="TFg-jV-Wgj" secondAttribute="centerY" id="eUn-uQ-Jqy"/>
+                                        <constraint firstItem="Z0Q-Vr-CM2" firstAttribute="leading" secondItem="TFg-jV-Wgj" secondAttribute="leadingMargin" constant="2" id="srZ-iH-zFH"/>
                                     </constraints>
                                     <variation key="default">
                                         <mask key="constraints">
+                                            <exclude reference="83T-Kn-PeP"/>
                                             <exclude reference="GPZ-Uf-gzL"/>
                                             <exclude reference="HSl-nf-Ids"/>
+                                            <exclude reference="eUn-uQ-Jqy"/>
                                         </mask>
                                     </variation>
                                     <variation key="heightClass=regular-widthClass=compact">
                                         <mask key="subviews">
                                             <include reference="Z0Q-Vr-CM2"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <include reference="83T-Kn-PeP"/>
+                                            <include reference="eUn-uQ-Jqy"/>
                                         </mask>
                                     </variation>
                                     <variation key="heightClass=regular-widthClass=regular">
