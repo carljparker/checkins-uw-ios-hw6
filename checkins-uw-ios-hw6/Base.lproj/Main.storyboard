@@ -347,6 +347,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mkMapView" destination="Qqz-Qx-iF7" id="Yyz-hV-5MJ"/>
+                        <outlet property="searchBar" destination="MMu-hm-aK4" id="dbi-pB-ja5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6kB-hn-SML" userLabel="First Responder" sceneMemberID="firstResponder"/>
