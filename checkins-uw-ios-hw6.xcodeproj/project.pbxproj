@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		871EDFB41B1A72C300AA36F9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 871EDFB31B1A72C300AA36F9 /* MapKit.framework */; };
+		871EDFB71B1BD9C300AA36F9 /* CheckinListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 871EDFB61B1BD9C300AA36F9 /* CheckinListTableViewController.m */; };
+		871EDFBA1B1BDBA400AA36F9 /* CheckinInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 871EDFB91B1BDBA400AA36F9 /* CheckinInfo.m */; };
+		871EDFBD1B1BDBC200AA36F9 /* CheckinTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 871EDFBC1B1BDBC200AA36F9 /* CheckinTableViewCell.m */; };
 		872597DE1B18B34E00CA5C48 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 872597DD1B18B34E00CA5C48 /* MapViewController.m */; };
 		87B9E9311B12484A00971FB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B9E9301B12484A00971FB0 /* main.m */; };
 		87B9E9341B12484A00971FB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B9E9331B12484A00971FB0 /* AppDelegate.m */; };
@@ -36,6 +39,12 @@
 
 /* Begin PBXFileReference section */
 		871EDFB31B1A72C300AA36F9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		871EDFB51B1BD9C300AA36F9 /* CheckinListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckinListTableViewController.h; sourceTree = "<group>"; };
+		871EDFB61B1BD9C300AA36F9 /* CheckinListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckinListTableViewController.m; sourceTree = "<group>"; };
+		871EDFB81B1BDBA400AA36F9 /* CheckinInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckinInfo.h; sourceTree = "<group>"; };
+		871EDFB91B1BDBA400AA36F9 /* CheckinInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckinInfo.m; sourceTree = "<group>"; };
+		871EDFBB1B1BDBC200AA36F9 /* CheckinTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckinTableViewCell.h; sourceTree = "<group>"; };
+		871EDFBC1B1BDBC200AA36F9 /* CheckinTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckinTableViewCell.m; sourceTree = "<group>"; };
 		872597DC1B18B34E00CA5C48 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		872597DD1B18B34E00CA5C48 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		87B9E92B1B12484A00971FB0 /* checkins-uw-ios-hw6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "checkins-uw-ios-hw6.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +93,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		871EDFBE1B1BDBCD00AA36F9 /* Checkin */ = {
+			isa = PBXGroup;
+			children = (
+				871EDFB81B1BDBA400AA36F9 /* CheckinInfo.h */,
+				871EDFB91B1BDBA400AA36F9 /* CheckinInfo.m */,
+				871EDFBB1B1BDBC200AA36F9 /* CheckinTableViewCell.h */,
+				871EDFBC1B1BDBC200AA36F9 /* CheckinTableViewCell.m */,
+				871EDFB51B1BD9C300AA36F9 /* CheckinListTableViewController.h */,
+				871EDFB61B1BD9C300AA36F9 /* CheckinListTableViewController.m */,
+			);
+			name = Checkin;
+			sourceTree = "<group>";
+		};
+		871EDFBF1B1BDBF300AA36F9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				87B9E9561B124B9100971FB0 /* ImageInfo.h */,
+				87B9E9571B124B9100971FB0 /* ImageInfo.m */,
+				87B9E9581B124B9100971FB0 /* ImageTableViewCell.h */,
+				87B9E9591B124B9100971FB0 /* ImageTableViewCell.m */,
+				87B9E95A1B124B9100971FB0 /* ImageListTableViewController.h */,
+				87B9E95B1B124B9100971FB0 /* ImageListTableViewController.m */,
+				87B9E95C1B124B9100971FB0 /* GetImageViewController.h */,
+				87B9E95D1B124B9100971FB0 /* GetImageViewController.m */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		87B9E9221B12484A00971FB0 = {
 			isa = PBXGroup;
 			children = (
@@ -108,21 +145,15 @@
 			children = (
 				87B9E9321B12484A00971FB0 /* AppDelegate.h */,
 				87B9E9331B12484A00971FB0 /* AppDelegate.m */,
+				871EDFBE1B1BDBCD00AA36F9 /* Checkin */,
+				871EDFBF1B1BDBF300AA36F9 /* Images */,
 				87B9E9351B12484A00971FB0 /* ViewController.h */,
 				87B9E9361B12484A00971FB0 /* ViewController.m */,
 				872597DC1B18B34E00CA5C48 /* MapViewController.h */,
 				872597DD1B18B34E00CA5C48 /* MapViewController.m */,
-				87B9E93D1B12484A00971FB0 /* LaunchScreen.xib */,
-				87B9E9561B124B9100971FB0 /* ImageInfo.h */,
-				87B9E9571B124B9100971FB0 /* ImageInfo.m */,
-				87B9E9581B124B9100971FB0 /* ImageTableViewCell.h */,
-				87B9E9591B124B9100971FB0 /* ImageTableViewCell.m */,
-				87B9E95A1B124B9100971FB0 /* ImageListTableViewController.h */,
-				87B9E95B1B124B9100971FB0 /* ImageListTableViewController.m */,
-				87B9E95C1B124B9100971FB0 /* GetImageViewController.h */,
-				87B9E95D1B124B9100971FB0 /* GetImageViewController.m */,
-				87B9E93B1B12484A00971FB0 /* Images.xcassets */,
 				87B9E9381B12484A00971FB0 /* Main.storyboard */,
+				87B9E93D1B12484A00971FB0 /* LaunchScreen.xib */,
+				87B9E93B1B12484A00971FB0 /* Images.xcassets */,
 				87B9E92E1B12484A00971FB0 /* Supporting Files */,
 			);
 			path = "checkins-uw-ios-hw6";
@@ -265,12 +296,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				87B9E9371B12484A00971FB0 /* ViewController.m in Sources */,
+				871EDFBA1B1BDBA400AA36F9 /* CheckinInfo.m in Sources */,
 				87B9E9601B124B9100971FB0 /* ImageListTableViewController.m in Sources */,
+				871EDFBD1B1BDBC200AA36F9 /* CheckinTableViewCell.m in Sources */,
 				87B9E95E1B124B9100971FB0 /* ImageInfo.m in Sources */,
 				872597DE1B18B34E00CA5C48 /* MapViewController.m in Sources */,
 				87B9E9611B124B9100971FB0 /* GetImageViewController.m in Sources */,
 				87B9E95F1B124B9100971FB0 /* ImageTableViewCell.m in Sources */,
 				87B9E9341B12484A00971FB0 /* AppDelegate.m in Sources */,
+				871EDFB71B1BD9C300AA36F9 /* CheckinListTableViewController.m in Sources */,
 				87B9E9311B12484A00971FB0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
