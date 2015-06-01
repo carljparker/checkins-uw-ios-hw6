@@ -6,11 +6,20 @@
 //  Copyright (c) 2015 Parker, Carl (HBO). All rights reserved.
 //
 
+
 #import "CheckinListTableViewController.h"
+#import "CheckinTableViewCell.h"
+
+
+static NSString *checkinCustomTableCellID = @"checkinCustomCell";
+
 
 @interface CheckinListTableViewController ()
 
+@property (nonatomic, copy) NSMutableArray *checkinInfoList;
+
 @end
+
 
 @implementation CheckinListTableViewController
 
@@ -32,26 +41,39 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return 3;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    
+    CheckinTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:checkinCustomTableCellID forIndexPath:indexPath];
     
     // Configure the cell...
     
+    cell.checkinLocation.text = @"7121 Delmar";
+    
     return cell;
 }
-*/
+
+
+
+//
+// This outlet is called when the Cancel button is tapped to
+// dismisss the add-birthday UX.
+//
+- (IBAction)unwindToList:(UIStoryboardSegue *)segue; {
+    
+    NSLog(@"%@", @"Done button dismissal of map view & search UX");
+    
+}
 
 /*
 // Override to support conditional editing of the table view.

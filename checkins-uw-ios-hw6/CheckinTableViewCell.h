@@ -10,4 +10,6 @@
 
 @interface CheckinTableViewCell : UITableViewCell
 
+@property (strong, nonatomic) IBOutlet UILabel *checkinLocation;
+
 @end

@@ -10,4 +10,10 @@
 
 @interface CheckinInfo : NSObject
 
+@property (nonatomic, copy) NSString * location;
+
+@property (nonatomic, copy) NSMutableArray * imageInfoList;
+
+-(instancetype) initWithLocation:(NSString *)location;
+
 @end

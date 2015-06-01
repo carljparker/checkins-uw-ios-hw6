@@ -10,4 +10,19 @@
 
 @implementation CheckinInfo
 
+-(instancetype)initWithLocation:(NSString *)location {
+    
+    self = [super init];
+    
+    if (self)
+    {
+        
+        self.location = location;
+        
+    }
+    
+    return self;
+    
+}
+
 @end
