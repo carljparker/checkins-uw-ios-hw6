@@ -7,6 +7,7 @@
 //
 
 #import "CheckinInfo.h"
+#import "ImageInfo.h"
 
 @implementation CheckinInfo
 
@@ -18,6 +19,7 @@
     {
         
         self.location = location;
+        self.imageInfoList = [[NSMutableArray alloc] init];
         
     }
     

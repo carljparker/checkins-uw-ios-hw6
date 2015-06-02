@@ -12,6 +12,6 @@
 
 @interface ImageListTableViewController : UITableViewController <GetImageViewControllerDelegate>
 
-@property (nonatomic, copy) NSMutableArray * imageInfoList;
+@property (nonatomic, strong) NSMutableArray * imageInfoList;
 
 @end

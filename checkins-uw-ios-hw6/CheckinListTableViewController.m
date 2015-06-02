@@ -11,6 +11,8 @@
 #import "CheckinTableViewCell.h"
 #import "MapViewController.h"
 
+#import "ImageListTableViewController.h"
+
 
 static NSString *checkinCustomTableCellID = @"checkinCustomCell";
 
@@ -75,6 +77,16 @@ static NSString *checkinCustomTableCellID = @"checkinCustomCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"%@", @"didSelectRowAtIndexPath");
+    
+    CheckinInfo * checkinInfo = (CheckinInfo *)self.checkinInfoList[indexPath.row];
+    
+    ImageListTableViewController * imageListTableViewController = [[ImageListTableViewController alloc] init];
+    
+    imageListTableViewController.imageInfoList = checkinInfo.imageInfoList;
+    
+    [[self navigationController] pushViewController:imageListTableViewController animated:YES];
+    
+    
 }
 
 
