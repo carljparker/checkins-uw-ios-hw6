@@ -31,6 +31,13 @@ static NSString * customImageCellID = @"customImageCell";
     NSLog(@"%s", __PRETTY_FUNCTION__);
     
     
+    self.navigationItem.title = @"Checkin Gallery";
+    
+    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(sayHello:)];
+    
+    self.navigationItem.rightBarButtonItem = rightBarButtonItem;
+    
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -52,14 +59,18 @@ static NSString * customImageCellID = @"customImageCell";
 
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
     // Return the number of sections.
     return 1;
+    
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
     // Return the number of rows in the section.
     return self.imageInfoList.count;
+    
 }
 
 
@@ -83,6 +94,11 @@ static NSString * customImageCellID = @"customImageCell";
     
     return cell;
     
+}
+
+- (IBAction)sayHello:(id)sender
+{
+    NSLog(@"%@", @"Custom Button Clicked");
 }
 
 
