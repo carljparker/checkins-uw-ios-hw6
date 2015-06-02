@@ -28,6 +28,9 @@ static NSString * customImageCellID = @"customImageCell";
     
     [super viewDidLoad];
     
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
