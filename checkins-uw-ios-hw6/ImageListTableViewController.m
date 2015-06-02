@@ -14,7 +14,7 @@
 static NSString * imageTableCellID = @"imageCell";
 static NSString * customImageCellID = @"customImageCell";
 
-NSMutableArray * imageInfoList;
+// NSMutableArray * imageInfoList;
 
 
 @interface ImageListTableViewController ()
@@ -34,7 +34,7 @@ NSMutableArray * imageInfoList;
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    imageInfoList = [[NSMutableArray alloc] init];
+    self.imageInfoList = [[NSMutableArray alloc] init];
     
 }
 
@@ -56,7 +56,7 @@ NSMutableArray * imageInfoList;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return imageInfoList.count;
+    return self.imageInfoList.count;
 }
 
 
@@ -64,7 +64,7 @@ NSMutableArray * imageInfoList;
     
     ImageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:customImageCellID  forIndexPath:indexPath];
     
-    ImageInfo *imageInfo = (ImageInfo *)imageInfoList[indexPath.row];
+    ImageInfo *imageInfo = (ImageInfo *)self.imageInfoList[indexPath.row];
     
     cell.imageView.image = imageInfo.image;
 
@@ -98,7 +98,7 @@ NSMutableArray * imageInfoList;
 
 - (void)getImageViewController:(GetImageViewController *)getImageViewController didGetImageInfo:(ImageInfo *)imageInfo {
     
-    [imageInfoList addObject:imageInfo];
+    [self.imageInfoList addObject:imageInfo];
     
     [self.tableView reloadData];
     
