@@ -152,11 +152,13 @@
                                             <rect key="frame" x="10" y="36" width="100" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="76" id="1n9-iK-IK5"/>
-                                                <constraint firstAttribute="width" constant="100" id="Wtq-pI-Ryk"/>
+                                                <constraint firstAttribute="width" constant="100" id="Wtq-pI-Ryk">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="69"/>
+                                                </constraint>
                                                 <constraint firstAttribute="width" constant="69" id="bg6-Ad-ogw"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -169,7 +171,7 @@
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
                                                 <mask key="constraints">
-                                                    <include reference="bg6-Ad-ogw"/>
+                                                    <exclude reference="bg6-Ad-ogw"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=regular">
@@ -180,7 +182,9 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Z0Q-Vr-CM2" firstAttribute="leading" secondItem="TFg-jV-Wgj" secondAttribute="leadingMargin" constant="4" id="83T-Kn-PeP"/>
+                                        <constraint firstItem="Z0Q-Vr-CM2" firstAttribute="leading" secondItem="TFg-jV-Wgj" secondAttribute="leadingMargin" constant="4" id="83T-Kn-PeP">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="2"/>
+                                        </constraint>
                                         <constraint firstAttribute="centerY" secondItem="Z0Q-Vr-CM2" secondAttribute="centerY" constant="-0.5" id="GPZ-Uf-gzL"/>
                                         <constraint firstItem="Z0Q-Vr-CM2" firstAttribute="leading" secondItem="TFg-jV-Wgj" secondAttribute="leadingMargin" constant="-7" id="HSl-nf-Ids">
                                             <variation key="heightClass=regular-widthClass=regular" constant="42"/>
@@ -204,6 +208,7 @@
                                         <mask key="constraints">
                                             <include reference="83T-Kn-PeP"/>
                                             <include reference="eUn-uQ-Jqy"/>
+                                            <exclude reference="srZ-iH-zFH"/>
                                         </mask>
                                     </variation>
                                     <variation key="heightClass=regular-widthClass=regular">
