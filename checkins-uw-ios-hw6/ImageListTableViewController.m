@@ -33,7 +33,7 @@ static NSString * customImageCellID = @"customImageCell";
     
     self.navigationItem.title = @"Checkin Gallery";
     
-    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(sayHello:)];
+    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(getImage:)];
     
     self.navigationItem.rightBarButtonItem = rightBarButtonItem;
     
@@ -96,7 +96,7 @@ static NSString * customImageCellID = @"customImageCell";
     
 }
 
-- (IBAction)sayHello:(id)sender
+- (IBAction)getImage:(id)sender
 {
     NSLog(@"%@", @"Custom Button Clicked");
 }
