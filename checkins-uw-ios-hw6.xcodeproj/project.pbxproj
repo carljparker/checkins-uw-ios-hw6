@@ -12,6 +12,7 @@
 		871EDFBA1B1BDBA400AA36F9 /* CheckinInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 871EDFB91B1BDBA400AA36F9 /* CheckinInfo.m */; };
 		871EDFBD1B1BDBC200AA36F9 /* CheckinTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 871EDFBC1B1BDBC200AA36F9 /* CheckinTableViewCell.m */; };
 		872597DE1B18B34E00CA5C48 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 872597DD1B18B34E00CA5C48 /* MapViewController.m */; };
+		879F51781B1F578F0053C429 /* GetImageNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F51771B1F578F0053C429 /* GetImageNavController.m */; };
 		87B9E9311B12484A00971FB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B9E9301B12484A00971FB0 /* main.m */; };
 		87B9E9341B12484A00971FB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B9E9331B12484A00971FB0 /* AppDelegate.m */; };
 		87B9E9371B12484A00971FB0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B9E9361B12484A00971FB0 /* ViewController.m */; };
@@ -47,6 +48,8 @@
 		871EDFBC1B1BDBC200AA36F9 /* CheckinTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckinTableViewCell.m; sourceTree = "<group>"; };
 		872597DC1B18B34E00CA5C48 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		872597DD1B18B34E00CA5C48 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		879F51761B1F578F0053C429 /* GetImageNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetImageNavController.h; sourceTree = "<group>"; };
+		879F51771B1F578F0053C429 /* GetImageNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetImageNavController.m; sourceTree = "<group>"; };
 		87B9E92B1B12484A00971FB0 /* checkins-uw-ios-hw6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "checkins-uw-ios-hw6.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87B9E92F1B12484A00971FB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87B9E9301B12484A00971FB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -111,6 +114,8 @@
 			children = (
 				87B9E9561B124B9100971FB0 /* ImageInfo.h */,
 				87B9E9571B124B9100971FB0 /* ImageInfo.m */,
+				879F51761B1F578F0053C429 /* GetImageNavController.h */,
+				879F51771B1F578F0053C429 /* GetImageNavController.m */,
 				87B9E9581B124B9100971FB0 /* ImageTableViewCell.h */,
 				87B9E9591B124B9100971FB0 /* ImageTableViewCell.m */,
 				87B9E95A1B124B9100971FB0 /* ImageListTableViewController.h */,
@@ -305,6 +310,7 @@
 				87B9E95F1B124B9100971FB0 /* ImageTableViewCell.m in Sources */,
 				87B9E9341B12484A00971FB0 /* AppDelegate.m in Sources */,
 				871EDFB71B1BD9C300AA36F9 /* CheckinListTableViewController.m in Sources */,
+				879F51781B1F578F0053C429 /* GetImageNavController.m in Sources */,
 				87B9E9311B12484A00971FB0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,4 +1,20 @@
 
+
+### Cannot Segue from a View Controller Embedded in a Nav Controller ###
+
+
+### Cannot Push a Navigation Controller ###
+
+The following code compiles but fails at runtime with the error:
+`'NSInvalidArgumentException', reason: 'Pushing a navigation controller
+is not supported'`
+
+    GetImageViewController *getImageViewController = [[GetImageViewController alloc] init];
+    GetImageNavController *getImageNavController = [[GetImageNavController alloc] initWithRootViewController:getImageViewController];
+    
+    [[self navigationController] pushViewController:getImageNavController animated:YES];
+
+
 ### Correct LocationManager Request for NSLocationUsageDescription ###
 
 When we went through the demo for location services in class, we used
