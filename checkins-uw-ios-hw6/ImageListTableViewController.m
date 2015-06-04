@@ -9,6 +9,7 @@
 
 #import "ImageListTableViewController.h"
 #import "GetImageViewController.h"
+#import "GetImageNavController.h"
 
 
 static NSString * imageTableCellID = @"imageCell";
@@ -99,6 +100,23 @@ static NSString * customImageCellID = @"customImageCell";
 - (IBAction)getImage:(id)sender
 {
     NSLog(@"%@", @"Custom Button Clicked");
+    
+    GetImageViewController *getImageViewController = [[GetImageViewController alloc] init];
+
+//
+//  You cannot push a Nav controller.
+//
+//  If I push the View Controller, I get an all black VC with a toolbar with a "back" button.
+//
+//  If I do the following, and present the Nav controller, I get an all-black VC with an empty toolbar at the top, no back button
+//
+//    GetImageNavController *getImageNavController = [[GetImageNavController alloc] initWithRootViewController:getImageViewController];
+    
+//
+//  The following gives me just an all-black VC.
+//
+    [self presentViewController:getImageViewController animated:YES completion:nil];
+    
 }
 
 

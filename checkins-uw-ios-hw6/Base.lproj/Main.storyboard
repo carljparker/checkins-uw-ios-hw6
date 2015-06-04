@@ -156,7 +156,7 @@
                                                 <constraint firstAttribute="width" constant="69" id="bg6-Ad-ogw"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -370,10 +370,10 @@
             </objects>
             <point key="canvasLocation" x="1098" y="300"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Get Image Nav Controller-->
         <scene sceneID="d7Z-6q-sA4">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bn7-fN-oSh" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bn7-fN-oSh" customClass="GetImageNavController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sc2-A6-D4P">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
