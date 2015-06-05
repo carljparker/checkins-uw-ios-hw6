@@ -31,6 +31,8 @@ static NSString *checkinCustomTableCellID = @"checkinCustomCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    
     self.checkinInfoList = [[NSMutableArray alloc] init];
     
     self.tableView.delegate = self;
