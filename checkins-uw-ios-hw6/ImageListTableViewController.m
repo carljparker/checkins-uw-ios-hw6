@@ -25,6 +25,23 @@ static NSString * customImageCellID = @"customImageCell";
 
 @implementation ImageListTableViewController
 
+
+-(instancetype)initWithImageList:(NSMutableArray *)imageList {
+    
+    self = [super init];
+    
+    if (self)
+    {
+        
+        self.imageInfoList = imageList;
+        
+    }
+    
+    return self;
+    
+}
+
+
 - (void)viewDidLoad {
     
     [super viewDidLoad];
@@ -46,8 +63,6 @@ static NSString * customImageCellID = @"customImageCell";
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    self.imageInfoList = [[NSMutableArray alloc] init];
     
 }
 

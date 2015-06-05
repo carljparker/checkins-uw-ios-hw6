@@ -14,4 +14,6 @@
 
 @property (nonatomic, strong) NSMutableArray * imageInfoList;
 
+-(instancetype)initWithImageList:(NSMutableArray *)imageList;
+
 @end
