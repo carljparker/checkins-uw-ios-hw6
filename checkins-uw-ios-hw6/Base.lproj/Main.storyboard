@@ -8,7 +8,7 @@
         <!--Capture Image-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="GetImageViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GetImageNew" id="BYZ-38-t0r" customClass="GetImageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -49,6 +49,41 @@
                 <exit id="s52-QA-dPi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2462" y="735"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="QCk-nk-AjM">
+            <objects>
+                <viewController id="qR0-bK-LLo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T2f-Pq-4po"/>
+                        <viewControllerLayoutGuide type="bottom" id="cZz-WQ-dP8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oP5-mI-row">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="moE-qc-El1">
+                                <rect key="frame" x="16" y="20" width="568" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="done" id="Lv4-Wb-uqI"/>
+                                    <barButtonItem systemItem="camera" id="VGx-5X-VcR"/>
+                                </items>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="20" width="368" height="44"/>
+                                </variation>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="moE-qc-El1"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M5C-3F-fCC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3178.5" y="-396"/>
         </scene>
         <!--My Image Gallery-->
         <scene sceneID="9KJ-x5-8cR">
@@ -106,11 +141,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Image Gallery" id="Wao-Ga-117">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3Qo-Bl-lrm">
-                            <connections>
-                                <segue destination="Bn7-fN-oSh" kind="presentation" id="o5v-ch-d8r"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3Qo-Bl-lrm"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eqT-Kq-jGd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -152,7 +183,9 @@
                                             <rect key="frame" x="10" y="36" width="100" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="76" id="1n9-iK-IK5"/>
-                                                <constraint firstAttribute="width" constant="100" id="Wtq-pI-Ryk"/>
+                                                <constraint firstAttribute="width" constant="100" id="Wtq-pI-Ryk">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="69"/>
+                                                </constraint>
                                                 <constraint firstAttribute="width" constant="69" id="bg6-Ad-ogw"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -169,7 +202,7 @@
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
                                                 <mask key="constraints">
-                                                    <include reference="bg6-Ad-ogw"/>
+                                                    <exclude reference="bg6-Ad-ogw"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=regular">
@@ -180,7 +213,9 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Z0Q-Vr-CM2" firstAttribute="leading" secondItem="TFg-jV-Wgj" secondAttribute="leadingMargin" constant="4" id="83T-Kn-PeP"/>
+                                        <constraint firstItem="Z0Q-Vr-CM2" firstAttribute="leading" secondItem="TFg-jV-Wgj" secondAttribute="leadingMargin" constant="4" id="83T-Kn-PeP">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="2"/>
+                                        </constraint>
                                         <constraint firstAttribute="centerY" secondItem="Z0Q-Vr-CM2" secondAttribute="centerY" constant="-0.5" id="GPZ-Uf-gzL"/>
                                         <constraint firstItem="Z0Q-Vr-CM2" firstAttribute="leading" secondItem="TFg-jV-Wgj" secondAttribute="leadingMargin" constant="-7" id="HSl-nf-Ids">
                                             <variation key="heightClass=regular-widthClass=regular" constant="42"/>
@@ -204,6 +239,7 @@
                                         <mask key="constraints">
                                             <include reference="83T-Kn-PeP"/>
                                             <include reference="eUn-uQ-Jqy"/>
+                                            <exclude reference="srZ-iH-zFH"/>
                                         </mask>
                                     </variation>
                                     <variation key="heightClass=regular-widthClass=regular">
@@ -373,7 +409,7 @@
         <!--Get Image Nav Controller-->
         <scene sceneID="d7Z-6q-sA4">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bn7-fN-oSh" customClass="GetImageNavController" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="GetImageNav" automaticallyAdjustsScrollViewInsets="NO" id="Bn7-fN-oSh" customClass="GetImageNavController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sc2-A6-D4P">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
