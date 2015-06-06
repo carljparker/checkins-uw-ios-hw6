@@ -5,11 +5,44 @@ repository on GitHub:
 
 >  <https://github.com/carljparker/checkins-uw-ios-hw6>
 
+This homework implements a simple CheckIn app that enables the user to
+search for nearby locations on a MapView and select one, which is then
+stored in a list. The list is displayed in a table view. By tapping a
+row in this table view, the user can add images using the photo library
+or the device's camera. These images are associated with the checkin
+location for the row that the user tapped.
+
+The basic functionality described above works. That said there are a
+number of things about the app that could be improved.
+
+- The pins which identify locations on the map do not implement a custom
+button, but instead use just the standard detail disclosure button: (i).
+This is a usability issue.
+
+- When the user selects a location, the app simply saves the _title_ of
+the location, which in most cases is actually the address. It would be
+much better to derive a place name and store that in the checkin list.
+
+- The app enables the user to save multiple instances of the same
+location.
+
+In addition to the above, I'm pretty sure that the app contains some
+extraneous code that is not called, but which was introduced when I
+experimented with ways to get the view transitions to work. And since
+that code is commented, there are also extraneous comments that should
+be removed.
+
+I have ideas about how to fix all of these things and since this code
+will be the foundation for the next two HW assignments, I might end up
+fixing some of them. But for this assignment, it is time to call it good
+and move on.
+
 
 ## Implementation Issues (of Discoveries) ##
 
 The following issues (or perhaps _discoveries_) came up in the process
 of implementing the homework.
+
 
 ### Cannot Push a Navigation Controller ###
 
@@ -29,12 +62,20 @@ is not supported'`
 ### Cannot Segue from a View Controller Embedded in a Nav Controller ###
 
 I tried to do a segue from a VC embedded in a navigation controller to
-another navigation controller. This failed with an error that the
-sending VC did not have a segue with the identifier that I
-specified--even though it did. We spent a lot of time at NSCoders trying
-to understand why it was failing. We couldn’t come up with a good
-explanation, but I did discover that the same segue works if I am coming
-from just a VC rather than a VC embedded in a nav controller. 
+another navigation controller. 
+
+    - (IBAction)getImage:(id)sender
+    {
+        NSLog(@"%@", @"Custom Button Clicked");
+        [self performSegueWithIdentifier:@"getImage" sender:self];
+    }
+
+This failed with an error that the sending VC did not have a segue with
+the identifier that I specified--even though it did. We spent a lot of
+time at NSCoders trying to understand why it was failing. We couldn’t
+come up with a good explanation, but I did discover that the same segue
+works if I am coming from just a VC rather than a VC embedded in a nav
+controller. 
 
 
 ## Questions ##
