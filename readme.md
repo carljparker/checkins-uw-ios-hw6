@@ -5,8 +5,8 @@ repository on GitHub:
 
 >  <https://github.com/carljparker/checkins-uw-ios-hw6>
 
-This homework implements a simple CheckIn app that enables the user to
-search for nearby locations on a MapView and select one, which is then
+This homework implements a simple checkin app that enables the user to
+search for nearby locations on a map view and select one, which is then
 stored in a list. The list is displayed in a table view. By tapping a
 row in this table view, the user can add images using the photo library
 or the device's camera. These images are associated with the checkin
@@ -16,8 +16,8 @@ The basic functionality described above works. That said there are a
 number of things about the app that could be improved.
 
 - The pins which identify locations on the map do not implement a custom
-button, but instead use just the standard detail disclosure button: (i).
-This is a usability issue.
+button to checkin for that location, but instead use just the standard
+detail disclosure button: (i).  This is a usability issue.
 
 - When the user selects a location, the app simply saves the _title_ of
 the location, which in most cases is actually the address. It would be
@@ -38,7 +38,7 @@ fixing some of them. But for this assignment, it is time to call it good
 and move on.
 
 
-## Implementation Issues (of Discoveries) ##
+## Implementation Issues (or Discoveries) ##
 
 The following issues (or perhaps _discoveries_) came up in the process
 of implementing the homework.
@@ -61,8 +61,8 @@ is not supported'`
 
 ### Cannot Segue from a View Controller Embedded in a Nav Controller ###
 
-I tried to do a segue from a VC embedded in a navigation controller to
-another navigation controller. 
+I tried to do a segue to a navigation controller from a VC embedded in a
+navigation controller. 
 
     - (IBAction)getImage:(id)sender
     {
@@ -70,8 +70,9 @@ another navigation controller.
         [self performSegueWithIdentifier:@"getImage" sender:self];
     }
 
-This failed with an error that the sending VC did not have a segue with
-the identifier that I specified--even though it did. We spent a lot of
+This failed with an error that said that the sending VC did not have a
+segue with the identifier that I specified in the
+`performSegueWithIdentifier` call--even though it did. We spent a lot of
 time at NSCoders trying to understand why it was failing. We couldn’t
 come up with a good explanation, but I did discover that the same segue
 works if I am coming from just a VC rather than a VC embedded in a nav
@@ -81,20 +82,21 @@ controller.
 ## Questions ##
 
 The following questions came up during the course of this homework
-assignment. I posted these the the class discussion board.
+assignment. I posted these to the class discussion board.
 
 ### What is the Correct LocationManager Request for NSLocationUsageDescription? ###
 
-When we went through the demo for location services in class, we used
-some code similar to the following to request a particular class of
-authorization from the user.
+When we went through the demo for location services, we used some code
+similar to the following to request a particular class of authorization
+from the user.
 
     if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined) {
           [self.locationManager requestWhenInUseAuthorization];
       }
 
-We determined that the message sent to self.locationManager above needed to 
-mirror the value that we specified in Info.plist, one of the following:
+We determined that the message sent to self.locationManager above needed
+to mirror the value that we specified in Info.plist, one of the
+following:
 
     NSLocationWhenInUseUsageDescription
     NSLocationAlwaysUsageDescription
@@ -113,7 +115,7 @@ In this case, what would be the corresponding message for
 
 I did not see anything in the Xcode autocomplete that corresponds to
 this key. And if I use either of the other `request...` messages, the
-user isn't ever presented the request to enable location services.
+user isn't presented the request to enable location services.
 
 
 ### Why is id<> Required for MKAnnotation? ###
