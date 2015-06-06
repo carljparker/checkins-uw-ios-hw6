@@ -19,6 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    
 }
 
 - (void)didReceiveMemoryWarning {

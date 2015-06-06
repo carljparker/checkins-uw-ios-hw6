@@ -12,4 +12,8 @@
 
 @interface ImageListTableViewController : UITableViewController <GetImageViewControllerDelegate>
 
+@property (nonatomic, strong) NSMutableArray * imageInfoList;
+
+-(instancetype)initWithImageList:(NSMutableArray *)imageList;
+
 @end

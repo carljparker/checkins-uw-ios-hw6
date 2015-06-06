@@ -9,12 +9,13 @@
 
 #import "ImageListTableViewController.h"
 #import "GetImageViewController.h"
+#import "GetImageNavController.h"
 
 
 static NSString * imageTableCellID = @"imageCell";
 static NSString * customImageCellID = @"customImageCell";
 
-NSMutableArray * imageInfoList;
+// NSMutableArray * imageInfoList;
 
 
 @interface ImageListTableViewController ()
@@ -24,17 +25,44 @@ NSMutableArray * imageInfoList;
 
 @implementation ImageListTableViewController
 
+
+-(instancetype)initWithImageList:(NSMutableArray *)imageList {
+    
+    self = [super init];
+    
+    if (self)
+    {
+        
+        self.imageInfoList = imageList;
+        
+    }
+    
+    return self;
+    
+}
+
+
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    
+    
+    self.navigationItem.title = @"Checkin Gallery";
+    
+    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(getImage:)];
+    
+    self.navigationItem.rightBarButtonItem = rightBarButtonItem;
+    
+    [self.tableView registerClass:[ImageTableViewCell class] forCellReuseIdentifier:customImageCellID];
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    imageInfoList = [[NSMutableArray alloc] init];
     
 }
 
@@ -49,14 +77,18 @@ NSMutableArray * imageInfoList;
 
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
     // Return the number of sections.
     return 1;
+    
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
     // Return the number of rows in the section.
-    return imageInfoList.count;
+    return self.imageInfoList.count;
+    
 }
 
 
@@ -64,7 +96,7 @@ NSMutableArray * imageInfoList;
     
     ImageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:customImageCellID  forIndexPath:indexPath];
     
-    ImageInfo *imageInfo = (ImageInfo *)imageInfoList[indexPath.row];
+    ImageInfo *imageInfo = (ImageInfo *)self.imageInfoList[indexPath.row];
     
     cell.imageView.image = imageInfo.image;
 
@@ -82,10 +114,52 @@ NSMutableArray * imageInfoList;
     
 }
 
+- (IBAction)getImage:(id)sender
+{
+    NSLog(@"%@", @"Custom Button Clicked");
+    
+
+//
+//  You cannot push a Nav controller.
+//
+//  If I push the View Controller, I get an all black VC with a toolbar with a "back" button.
+//
+//  If I do the following, and present the Nav controller, I get an all-black VC with an empty toolbar at the top, no back button
+//
+//    GetImageNavController *getImageNavController = [[GetImageNavController alloc] initWithRootViewController:getImageViewController];
+    
+//
+//  The following gives me just an all-black VC.
+//
+
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    GetImageNavController *getImageNavController = [sb instantiateViewControllerWithIdentifier:@"GetImageNav"];
+    
+    GetImageViewController *getImageViewController  = (GetImageViewController *)getImageNavController.topViewController;
+    
+    NSLog(@"%@", getImageViewController);
+    
+    getImageViewController.getImageDelegate = self;
+    
+    [self presentViewController:getImageNavController animated:YES completion:nil];
+    
+}
+
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     [super prepareForSegue:segue sender:sender];
+    
+    //
+    // Note that this code doesn't instantiate either the nav or the view controller.
+    // By the time that this method, prepareForSegue, is called these destination nav
+    // controller and its top view controller already exist. We are just getting
+    // references to them here.
+    //
+    // It is interesting to note also that they use the term "top view controller" here
+    // rather than "root view controller"
+    //
     
     UINavigationController *navigationController = (UINavigationController *)segue.destinationViewController;
     
@@ -98,7 +172,7 @@ NSMutableArray * imageInfoList;
 
 - (void)getImageViewController:(GetImageViewController *)getImageViewController didGetImageInfo:(ImageInfo *)imageInfo {
     
-    [imageInfoList addObject:imageInfo];
+    [self.imageInfoList addObject:imageInfo];
     
     [self.tableView reloadData];
     
